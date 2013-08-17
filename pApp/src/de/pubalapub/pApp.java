@@ -15,9 +15,10 @@ public class pApp {
     public void start() {
         if(current != null){
             current.show();
+            System.out.println(current.getLayoutHeight());
             return;
         }
-        new StateMachine("/theme");        
+        StateMachine sm = new StateMachine("/theme");
     }
 
     public void stop() {

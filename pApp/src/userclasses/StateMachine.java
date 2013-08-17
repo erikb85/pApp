@@ -5,8 +5,12 @@
 package userclasses;
 
 import generated.StateMachineBase;
+
+import com.codename1.io.Util;
 import com.codename1.ui.*; 
 import com.codename1.ui.events.*;
+
+import de.pubalapub.data.Menu;
 
 /**
  *
@@ -24,5 +28,14 @@ public class StateMachine extends StateMachineBase {
      * the constructor/class scope to avoid race conditions
      */
     protected void initVars() {
+    	Util.register("Menu", Menu.class);
+    	System.out.println("init vars");
+    }
+
+    protected void onCreateMain() {
+        // If the resource file changes the names of components this call will break notifying you that you should fix the code
+    	
+        super.onCreateMain();
+    
     }
 }
